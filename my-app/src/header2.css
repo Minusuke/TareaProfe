@@ -1,0 +1,21 @@
+.rowheader {
+  background-color: rgb(59, 59, 75);
+  color: white; 
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.videoheader {
+  width: 420px;
+  height: 220px;
+  padding-left: 100px;
+}
+.buttonheader {
+  background-color: rgb(118, 184, 20);
+  border-radius: 5px;
+  color: white;
+  width: 200px;
+  height: 50px;
+}
+.me-auto  {
+  color: white;
+}

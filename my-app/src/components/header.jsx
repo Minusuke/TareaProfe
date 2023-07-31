@@ -1,21 +1,52 @@
 import React from "react";
 
-const Header = (props) =>{
-return(
-    <header className="py-5">
-        {
-             <div className="container px-lg-5">
-             <div className="p-4 p-lg-5 bg-light rounded-3 text-center">
-        <div className="m-4 m-lg-5">
-          <h1 className="display-5 fw-bold">A warm welcome!</h1>
-          <p className="fs-4">Bootstrap utility classes are used to create this jumbotron since the old component has been removed from the framework. Why create custom CSS when you can use utilities?</p>
-          <a className="btn btn-primary btn-lg" href="#!">Call to action</a>
-        </div>
-      </div>
-             </div>
-             }
-      </header>
-)
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
+import Button from "react-bootstrap/Button";
+
+import "../../styles/header.css";
+
+function Header() {
+	return (
+		<>
+			<Navbar bg="secondary" expand="lg">
+				<Container fluid>
+					<Navbar.Brand href="#">Cosina de la abuela centro culinario</Navbar.Brand>
+					<Navbar.Toggle aria-controls="navbarScroll" />
+					<Navbar.Collapse id="navbarScroll">
+						<Nav
+							className="me-auto my-2 my-lg-0"
+							style={{ maxHeight: "100px" }}
+							navbarScroll>
+							<Nav.Link href="#action1">Cursos</Nav.Link>
+							<Nav.Link href="#action2">Blog</Nav.Link>
+							<Nav.Link href="#action3">Foro</Nav.Link>
+							<Nav.Link href="#action4">Agenda</Nav.Link>
+							<Nav.Link href="#action5">Acerca</Nav.Link>
+							<Nav.Link href="#action6">Alianza comercial</Nav.Link>
+							<Nav.Link href="#action7">
+								Contactenos
+							</Nav.Link>
+						</Nav>
+						<Form className="d-flex">
+							<Button variant="outline-success">
+								Iniciar Sesion
+							</Button>
+							<FormControl
+								type="search"
+								placeholder="Buscar en la cosina de mi abuela"
+								className="me-2"
+								aria-label="Search"
+							/>
+						</Form>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+		</>
+	);
 }
 
-      export default Header;
+export default Header;
